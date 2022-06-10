@@ -1,0 +1,50 @@
+.wrapper {
+  animation: fadeIn linear 0.9s;
+  position: relative;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  background-color: #a3a3a3;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #76757a;
+  border-radius: 10px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+}
+
+.side-bar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 20%;
+  background-color: var(--black-color);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  min-height: 100vh;
+  background: linear-gradient(#5b5773, #000);
+}
+
+.footer {
+  z-index: 2;
+  box-shadow: 1px 0 4px rgba($color: #555555, $alpha: 0.8);
+  background-color: var(--music-bar-color);
+  min-height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
