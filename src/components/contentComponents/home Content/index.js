@@ -18,7 +18,7 @@ const listImg = [
   "https://i.ytimg.com/vi/D39ZsK_vkU8/maxresdefault.jpg",
   "https://avatar-ex-swe.nixcdn.com/topic/share/2020/08/13/e/9/1/9/1597291430873.jpg",
   "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c00293110380289.5feb7f676810d.jpg",
-  "https://miro.medium.com/max/1200/1*9GcTzTBtyivahyQKZRd_yg.png",
+  "https://connect-assets.prosple.com/cdn/ff/GODPYypbPpHvsFSI3T4VoL7uCJaOLXti2ZRNBfgpjxI/1636896022/public/styles/scale_and_crop_center_890x320/public/2021-11/banner-spotify-1786x642-2021.png?itok=pQ1TMWFs",
   "https://avatar-ex-swe.nixcdn.com/topic/share/2020/08/13/e/9/1/9/1597291430873.jpg",
   "https://i.pinimg.com/originals/4f/1a/84/4f1a84c2af22dba4b8715496a435f8f0.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c00293110380289.5feb7f676810d.jpg",
