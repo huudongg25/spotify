@@ -104,7 +104,18 @@ function HomeContent() {
                 src="https://i.scdn.co/image/ab67616d0000b273b409df2001f85d6688c40c97"
                 alt=""
               />
-              <h3 className={cx("desc-song")}>Description list song</h3>
+              <h3 className={cx("desc-song")}>Leave the door open</h3>
+              <p className={cx("author-song")}>Bruno Mars</p>
+
+              <FontAwesomeIcon className={cx("play-btn")} icon={faPlay} />
+            </div>
+            <div className={cx("info-song")}>
+              <img
+                className={cx("img-song")}
+                src="https://i1.sndcdn.com/artworks-001065477745-ypb63j-t500x500.jpg"
+                alt=""
+              />
+              <h3 className={cx("desc-song")}>Indie Việt</h3>
               <p className={cx("author-song")}>Chillies</p>
 
               <FontAwesomeIcon className={cx("play-btn")} icon={faPlay} />
@@ -112,33 +123,22 @@ function HomeContent() {
             <div className={cx("info-song")}>
               <img
                 className={cx("img-song")}
-                src="https://i.scdn.co/image/ab67616d0000b273b409df2001f85d6688c40c97"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Gh4cpUTXwrZbdj05Ly5lyDI7nQfSV659UctNQJ52NbYBxj6YDmHNk4VAV-ChXa95bgc&usqp=CAU"
                 alt=""
               />
-              <h3 className={cx("desc-song")}>Description list song</h3>
-              <p className={cx("author-song")}>Chillies</p>
+              <h3 className={cx("desc-song")}>US-UK</h3>
+              <p className={cx("author-song")}>Justin Bieber </p>
 
               <FontAwesomeIcon className={cx("play-btn")} icon={faPlay} />
             </div>
             <div className={cx("info-song")}>
               <img
                 className={cx("img-song")}
-                src="https://i.scdn.co/image/ab67616d0000b273b409df2001f85d6688c40c97"
+                src="https://i1.sndcdn.com/artworks-000284965394-7s4qko-t500x500.jpg"
                 alt=""
               />
-              <h3 className={cx("desc-song")}>Description list song</h3>
-              <p className={cx("author-song")}>Chillies</p>
-
-              <FontAwesomeIcon className={cx("play-btn")} icon={faPlay} />
-            </div>
-            <div className={cx("info-song")}>
-              <img
-                className={cx("img-song")}
-                src="https://i.scdn.co/image/ab67616d0000b273b409df2001f85d6688c40c97"
-                alt=""
-              />
-              <h3 className={cx("desc-song")}>Description list song</h3>
-              <p className={cx("author-song")}>Chillies</p>
+              <h3 className={cx("desc-song")}>Back to the 80's</h3>
+              <p className={cx("author-song")}>George Michael</p>
 
               <FontAwesomeIcon className={cx("play-btn")} icon={faPlay} />
             </div>

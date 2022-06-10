@@ -27,7 +27,7 @@ function LibraryContent() {
           <table className={cx("table")}>
             <thead>
               <tr>
-                <th className={cx("thead")}>#</th>
+                <th className={cx("thead")}>No</th>
                 <th className={cx("thead")}>Title</th>
                 <th className={cx("thead")}>Author</th>
               </tr>
@@ -37,8 +37,8 @@ function LibraryContent() {
                 return (
                   <tr className={cx("tbody-container")} key={index}>
                     <td className={cx("tbody")}>{index + 1}</td>
-                    <td className={cx("tbody")}>{song.name}</td>
-                    <td className={cx("tbody")}>{song.author}</td>
+                    <td className={cx("tbody-song")}>{song.name}</td>
+                    <td className={cx("tbody-author")}>{song.author}</td>
                     <FontAwesomeIcon
                       className={cx("play-icon")}
                       icon={faPlay}
