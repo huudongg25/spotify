@@ -6,11 +6,14 @@ import SearchContent from "./components/contentComponents/searchContent";
 import LibraryContent from "./components/contentComponents/libraryContent";
 import { Songs } from "./Context";
 import DataSongs from "./components/data/songs.json";
+import { useState } from "react";
 
 function App() {
+  const [song, setSong] = useState(DataSongs[0]);
+
   return (
     <BrowserRouter>
-      <Songs.Provider value={{ DataSongs }}>
+      <Songs.Provider value={{ DataSongs, song, setSong }}>
         <Routes>
           <Route path="/" element={<Login></Login>} />
           <Route

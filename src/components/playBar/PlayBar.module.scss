@@ -7,9 +7,9 @@
 
 .song {
   overflow: hidden;
-  width: 250px;
+  width: 400px;
   display: flex;
-  margin-left: 10px;
+  margin-left: 4px;
   align-items: center;
   &-img {
     max-width: 55px;
@@ -63,10 +63,6 @@
   }
 }
 
-.active {
-  color: var(--button-color);
-}
-
 .progress {
   display: flex;
   justify-content: center;
@@ -87,7 +83,7 @@
   align-items: center;
   justify-content: center;
   color: var(--white-color);
-  width: 250px;
+  width: 333px;
   &-input {
     transition: 0.4s;
     cursor: pointer;
