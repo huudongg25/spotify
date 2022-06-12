@@ -47,11 +47,7 @@ function PlayBar() {
   return (
     <div className={cx("wrapper")}>
       <div className={cx("song")}>
-        <img
-          className={cx("song-img")}
-          src="https://img.freepik.com/free-vector/spotify-follow-me-social-media-banner-post-template-advertisement-3d-style_94946-75.jpg?w=2000"
-          alt="song"
-        />
+        <img className={cx("song-img")} src={song.urlimg} alt="song" />
         <div className={cx("song-info")}>
           <h4 className={cx("song-name")}>{song.name}</h4>
           <span className={cx("song-author")}>{song.author}</span>
