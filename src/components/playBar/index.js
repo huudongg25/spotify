@@ -11,7 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useRef } from "react";
 import { Songs } from "../../Context";
-
 const cx = classNames.bind(styles);
 function PlayBar() {
   const { song, setSong, DataSongs } = useContext(Songs);
