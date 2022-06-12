@@ -1,13 +1,3 @@
-This is my first project with ReactJS.
-Link project: https://huudong-spotify.netlify.app/
-
-
-
-
-
-
-
-
 
 # Getting Started with Create React App
 
