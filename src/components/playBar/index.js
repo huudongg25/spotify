@@ -5,7 +5,6 @@ import {
   faBackwardStep,
   faForwardStep,
   faPlay,
-  faRepeat,
   faStop,
   faVolumeHigh,
 } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +14,21 @@ const cx = classNames.bind(styles);
 function PlayBar() {
   const { song, setSong, DataSongs } = useContext(Songs);
   const audioRef = useRef();
+  const progressRef = useRef();
+
+  function handleProgress() {
+    if (audioRef.current.duration) {
+      const progressPercent = Math.floor(
+        (audioRef.current.currentTime / audioRef.current.duration) * 100
+      );
+      progressRef.current.value = progressPercent;
+    }
+  }
+
+  function handleSeekTime(e) {
+    let seekTime = (audioRef.current.duration / 100) * e.target.value;
+    audioRef.current.currentTime = seekTime;
+  }
 
   const handlePrev = () => {
     if (song.id > 0) {
@@ -35,9 +49,18 @@ function PlayBar() {
     }
   };
 
+  const handleEnded = () => {
+    if (song.id < DataSongs.length - 1) {
+      let newId = song.id + 1;
+      setSong(DataSongs[newId]);
+    } else if (song.id === DataSongs.length - 1) {
+      let newID = 0;
+      setSong(DataSongs[newID]);
+    }
+  };
+
   const handlePlay = () => {
     audioRef.current.play();
-    console.log(audioRef.current.volume);
   };
 
   const handleStop = () => {
@@ -55,10 +78,6 @@ function PlayBar() {
       </div>
       <div className={cx("control")}>
         <div className={cx("control-btn")}>
-          <FontAwesomeIcon
-            className={cx("control-btn-repeat")}
-            icon={faRepeat}
-          />
           <FontAwesomeIcon
             onClick={handlePrev}
             className={cx("control-btn-prev")}
@@ -83,6 +102,8 @@ function PlayBar() {
         <div className={cx("progress")}>
           <div className={cx("progress-bar")}>
             <input
+              ref={progressRef}
+              onChange={(e) => handleSeekTime(e.target.value)}
               className={cx("progress-input")}
               type="range"
               value="0"
@@ -90,7 +111,14 @@ function PlayBar() {
               min="0"
               max="100"
             />
-            <audio ref={audioRef} id="audio" src={song.url}></audio>
+            <audio
+              onEnded={handleEnded}
+              onTimeUpdate={handleProgress}
+              duration
+              ref={audioRef}
+              id="audio"
+              src={song.url}
+            ></audio>
           </div>
         </div>
       </div>
@@ -100,7 +128,7 @@ function PlayBar() {
         <input
           className={cx("volume-input")}
           type="range"
-          value="1"
+          value="0.5"
           step="1"
           min="0"
           max="100"
