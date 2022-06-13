@@ -35,7 +35,7 @@ function HomeContent() {
       SmoothHorizontalScrolling(
         slideRef.current,
         250,
-        itemRef.current.clientWidth * 0.8,
+        itemRef.current.clientWidth * 0.9,
         slideRef.current.scrollLeft
       );
     }

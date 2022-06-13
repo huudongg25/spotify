@@ -12,6 +12,7 @@
   margin-left: 4px;
   align-items: center;
   &-img {
+    user-select: none;
     object-position: center;
     object-fit: cover;
     max-height: 60px;
@@ -19,10 +20,8 @@
     margin-right: 15px;
   }
 
-  &-info {
-  }
-
   &-name {
+    user-select: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--white-color);
@@ -33,6 +32,7 @@
   }
 
   &-author {
+    user-select: none;
     font-weight: 300;
     font-size: 1.3rem;
     color: var(--white-color);
