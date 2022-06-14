@@ -96,6 +96,10 @@
   }
 }
 
+.tbody-container.active {
+  color: #c4c3c3;
+}
+
 .tbody-song {
   text-shadow: 0 3px 4px rgba($color: #000000, $alpha: 0.8);
   padding: 15px;
