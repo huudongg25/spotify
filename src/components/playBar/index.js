@@ -11,6 +11,7 @@ import {
 import { useContext, useRef, useState } from "react";
 import { Songs } from "../../Context";
 const cx = classNames.bind(styles);
+
 function PlayBar() {
   const [vol, setVol] = useState(1);
   const { song, setSong, DataSongs } = useContext(Songs);
@@ -102,17 +103,16 @@ function PlayBar() {
         </div>
         <div className={cx("progress")}>
           <div className={cx("progress-bar")}>
-            <progress
+            <input
               ref={progressRef}
               className={cx("progress-input")}
               type="range"
-              value="0.5"
+              value="0"
               step="1"
               min="0"
               max="100"
-            ></progress>
+            ></input>
             <audio
-              onVolumeChange={vol}
               onEnded={handleEnded}
               onTimeUpdate={handleProgress}
               ref={audioRef}
