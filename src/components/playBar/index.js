@@ -14,6 +14,7 @@ const cx = classNames.bind(styles);
 
 function PlayBar() {
   const [vol, setVol] = useState(1);
+  const [active, setActive] = useState("stopBtn");
   const { song, setSong, DataSongs } = useContext(Songs);
   const audioRef = useRef();
   const progressRef = useRef();
@@ -48,10 +49,12 @@ function PlayBar() {
 
   const handlePlay = () => {
     audioRef.current.play();
+    setActive("playBtn");
   };
 
   const handleStop = () => {
     audioRef.current.pause();
+    setActive("stopBtn");
   };
 
   const handleEnded = () => {
@@ -87,12 +90,20 @@ function PlayBar() {
           />
           <FontAwesomeIcon
             onClick={handlePlay}
-            className={cx("control-btn-play")}
+            className={
+              active === "playBtn"
+                ? cx("control-btn-play", "active")
+                : cx("control-btn-play")
+            }
             icon={faPlay}
           />
           <FontAwesomeIcon
             onClick={handleStop}
-            className={cx("control-btn-stop")}
+            className={
+              active === "stopBtn"
+                ? cx("control-btn-stop", "active")
+                : cx("control-btn-stop")
+            }
             icon={faStop}
           />
           <FontAwesomeIcon

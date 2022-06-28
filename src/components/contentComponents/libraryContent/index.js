@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 function LibraryContent() {
   const { DataSongs, setSong } = useContext(Songs);
   const [idSong, setIdSong] = useState(0);
+
   const handlePlaySong = (idSong) => {
     setIdSong(idSong);
     setSong(idSong);

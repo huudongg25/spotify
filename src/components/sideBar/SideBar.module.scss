@@ -19,6 +19,8 @@
   animation: tilt-in-left-1 linear 0.4s;
   margin-bottom: 12px;
   font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 999px;
   a {
     color: rgb(250, 239, 239);
     font-size: 1.6rem;
@@ -28,6 +30,10 @@
   a:hover {
     color: #808080;
   }
+}
+
+.menu-item.active {
+  background-color: #3f3e3e;
 }
 
 .icon {

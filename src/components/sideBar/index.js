@@ -7,10 +7,28 @@ import {
   faListSquares,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const cx = classnames.bind(styles);
 
+let curTab = "tab-1";
+
 function SideBar() {
+  const [tabs, setTabs] = useState(curTab);
+
+  const handleSetTab1 = () => {
+    setTabs("tab-1");
+    curTab = "tab-1";
+  };
+  const handleSetTab2 = () => {
+    setTabs("tab-2");
+    curTab = "tab-2";
+  };
+  const handleSetTab3 = () => {
+    setTabs("tab-3");
+    curTab = "tab-3";
+  };
+
   return (
     <div className={cx("wrapper")}>
       <header>
@@ -22,24 +40,39 @@ function SideBar() {
       </header>
       <div className={cx("container")}>
         <ul className={cx("menu")}>
-          <li className={cx("menu-item")}>
-            <Link to="/home">
+          <Link to="/home">
+            <li
+              onClick={handleSetTab1}
+              className={
+                tabs === "tab-1" ? cx("menu-item", "active") : cx("menu-item")
+              }
+            >
               <FontAwesomeIcon className={cx("icon")} icon={faHouse} />
               Home
-            </Link>
-          </li>
-          <li className={cx("menu-item")}>
-            <Link to="/search">
+            </li>
+          </Link>
+          <Link to="/search">
+            <li
+              onClick={handleSetTab2}
+              className={
+                tabs === "tab-2" ? cx("menu-item", "active") : cx("menu-item")
+              }
+            >
               <FontAwesomeIcon className={cx("icon")} icon={faSearch} />
               Search
-            </Link>
-          </li>
-          <li className={cx("menu-item")}>
-            <Link to="/library">
+            </li>
+          </Link>
+          <Link to="/library">
+            <li
+              onClick={handleSetTab3}
+              className={
+                tabs === "tab-3" ? cx("menu-item", "active") : cx("menu-item")
+              }
+            >
               <FontAwesomeIcon className={cx("icon")} icon={faListSquares} />
               Your Library
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
