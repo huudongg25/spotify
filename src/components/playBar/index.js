@@ -61,9 +61,11 @@ function PlayBar() {
     if (song.id < DataSongs.length - 1) {
       let newId = song.id + 1;
       setSong(DataSongs[newId]);
+      setActive("stopBtn");
     } else if (song.id === DataSongs.length - 1) {
       let newID = 0;
       setSong(DataSongs[newID]);
+      setActive("stopBtn");
     }
   };
 
